@@ -29,12 +29,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      # Adding Chalk
+      # Adding Chalk Again
       - name: Set up Chalk
         uses: crashappsec/setup-chalk-action@main
         continue-on-error: true
         with:
-          connect: true        
+          connect: true
 
       # - name: Adding Chalk - Manual
       #   run: |
