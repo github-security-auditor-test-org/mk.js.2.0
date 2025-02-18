@@ -1,5 +1,8 @@
 name: Docker Image CI
 
+env: 
+  __CHALK_TESTING__: "Yes"
+
 on:
   push:
     branches: [ "main" ]
