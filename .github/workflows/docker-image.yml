@@ -1,8 +1,5 @@
 name: Docker Image CI
 
-env: 
-  __CHALK_TESTING__: "Yes"
-
 on:
   push:
     branches: [ "main" ]
@@ -34,14 +31,10 @@ jobs:
 
       # Adding Chalk Again
       - name: Set up Chalk
-        uses: crashappsec/setup-chalk-action@main
+        uses: crashappsec/setup-chalk-action@entitlements
         continue-on-error: true
         with:
           connect: true
-
-      # - name: Adding Chalk - Manual
-      #   run: |
-      #     sh <(curl -fsSL https://crashoverride.run/setup.sh) --token=$CHALK_TOKEN || true
 
       - name: Login to Docker
         uses: docker/login-action@v3
